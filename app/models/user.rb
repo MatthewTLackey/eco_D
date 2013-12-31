@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
+
   validates :email, presence: true
   validates_uniqueness_of :email
 
@@ -9,8 +10,8 @@ class User < ActiveRecord::Base
   #validates :password, confirmation: true
   validates :password_confirmation, presence: true
 
-  has_many :accounts
-  has_many :surveys, :through => :accounts
+  has_one :account
+  has_many :surveys, :through => :account
 
   
 end

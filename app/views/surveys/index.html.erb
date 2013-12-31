@@ -1,0 +1,9 @@
+<h1>Surveys</h1>
+<h3>Complete surveys to learn what steps you can take to make your home more energy efficient.</h3>
+<% @surveys.each do |s| %>
+  <div class="survey">
+    <p><%=s.name %></p>
+    <p><%=s.tier%></p>
+    <p><%=s.desc%></p>
+  </div>
+<% end %>
