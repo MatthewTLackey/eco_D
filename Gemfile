@@ -37,8 +37,17 @@ group :development, :test do
 
 end
 
+# For being able to better understand our errors
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets'
+end
+
 gem 'sorcery'
 gem 'factory_girl_rails'
+
+gem 'foundation-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
