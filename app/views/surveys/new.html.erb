@@ -1,34 +1,93 @@
 <div class="row">
   <div class="small-6 large-2 columns"><p></p></div>
-  <div class="small-6 large-8 columns"><h1>Complete a New Survey</h1></div>
+  <div class="small-6 large-8 columns"><h1>Complete the Survey</h1></div>
   <div class="small-12 large-2 columns"><p></p></div>
 </div>
 
 
-
+<%= form_for @survey do |f| %>
 <div class="row">
   <div class="small-6 large-2 columns"><p></p></div>
   <div class="small-6 large-8 columns">
-    <h3>Fill out the following information:</h3>
-    <p>Address</p>
-    <p>Type of dwelling</p>
-    <p>Style</p>
-    <p>Materials (what it's made of)</p>
-    <p>Square footage</p>
-    <p>Type of heat source/fuel</p>
-    <p>Typical heating bill</p>
-    <p>Lighting</p>
-    <p>Typical electricity bill</p>
-    <p>Appliances</p>
-      <p>Kitchen</p>
-      <p>Laundry</p>
-    <p>Electricity usage</p>
+    <div class="row">
+      <div class="large-12 columns">
+        <%= f.label :address %>
+        <%= f.text_field :address %>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+        <%= f.label :type %>
+        <%= f.text_field :type %>
+      </div>
+    </div>
 
-    <h3>Perform the following steps:</h3>
-    <p>Measure your insulation</p>
-    <p>Check in strategic places for drafts</p>
-    <p>Etc.</p>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <%= f.label :material %>
+        <%= f.text_field :material %>
+        <select>
+        <option value="husker">Brick</option>
+        <option value="starbuck">Block</option>
+        <option value="hotdog">Vinyl</option>
+        <option value="apollo">Stucco</option>
+      </select>
+      </div>
+    </div>
+
+      <label>Building Material</label>
+      
+    
+
+
+    
+<div class="row">
+    <div class="large-12 columns">
+      <label>Square footage</label>
+      <input type="text" placeholder="In Square Feet" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Ceiling height</label>
+      <input type="text" placeholder="In Feet" />
+    </div>
+  </div>
+
+
+    <div class="small-12 columns">
+      <label>Heat Souce</label>
+      <input id="checkbox1" type="checkbox">
+        <label for="checkbox1">Woodburner</label>
+      <input id="checkbox2" type="checkbox">
+        <label for="checkbox2">Fuel oil furnace</label>
+      <input id="checkbox3" type="checkbox">
+        <label for="checkbox3">Natural gas furnace</label>
+      <input id="checkbox4" type="checkbox">
+        <label for="checkbox4">Electric furnace</label>
+      <input id="checkbox5" type="checkbox">
+        <label for="checkbox5">Heat pump</label>
+    </div>
+
+    <div class="row">
+    <div class="large-12 columns">
+      <label>Heating Bill</label>
+      <input type="text" placeholder="Cost in dollars" />
+    </div>
+  </div>
+    <div class="row">
+    <div class="large-12 columns">
+      <label>Electricity bill</label>
+      <input type="text" placeholder="Cost in dollars" />
+    </div>
+  </div>
+  <%= f.submit "Submit", :class =>"button" %>
   </div>
   <div class="small-12 large-2 columns"><p></p></div>
 </div>
 
+
+<% end %>

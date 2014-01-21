@@ -1,5 +1,22 @@
 require 'spec_helper'
 
 describe Survey do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  it 'should have a name' do
+
+  end
+  
+  it 'should fail without a name' do
+  
+  end
+
+  it 'should have an address' do
+
+  end
+
+  it 'should fail without an address' do
+  
+  end
+
+
 end
