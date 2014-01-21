@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140121175323) do
+ActiveRecord::Schema.define(version: 20140121222038) do
 
   create_table "accounts", force: true do |t|
     t.datetime "created_at"
@@ -28,13 +28,13 @@ ActiveRecord::Schema.define(version: 20140121175323) do
     t.text     "desc"
     t.integer  "tier_id"
     t.string   "address"
-    t.string   "type"
     t.string   "material"
     t.integer  "square_feet"
     t.integer  "height"
     t.string   "heat"
     t.integer  "heat_bill"
     t.integer  "electric_bill"
+    t.integer  "style"
   end
 
   create_table "tiers", force: true do |t|
